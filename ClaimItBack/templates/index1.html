@@ -1,0 +1,132 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock  %}</title>
+    <link rel="icon" type="image/png" href="{% static 'images/Logo.png' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+
+            <!-- Sign In -->
+
+            <div class="form-box sign-in">
+                <div class="logo-box">
+                    <img src="{% static 'images/Logo.png' %}" alt="logo">
+                </div>
+                <div class="title-box">
+                    <h3>Welcome Back !</h3>
+                    <p>To keep connected with us,please login.</p>
+                </div>
+                <form action="#">
+                    <div class="email-box input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="xyz@gmail.com" id="email" name="email" required>
+                    </div>
+                    <div class="password-box input-box">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="*********" id="password" name="password" required>
+                    </div>
+                    <div class="option-box">
+                        <a href="#" id="to-forgotpass"> Forgot Password?</a>
+                        <a href="#" id="to-signup">Don't Have Account? </a>
+                    </div>
+                    <div class="loginBtn">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sign Up -->
+
+            <div class="form-box sign-up">
+                <div class="logo-box">
+                    <img src="{% static 'images/Logo.png' %}" alt="logo">
+                </div>
+                <div class="title-box">
+                    <h3>Hello Friends!</h3>
+                    <p>Enter your details and start your journey with us.</p>
+                </div>
+                <form action="#">
+                    <div class="email-box input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="xyz@gmail.com" id="email" name="email" required>
+                    </div>
+                    <div class="password-box input-box">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="*********" id="password" name="password" required>
+                    </div>
+                    <div class="confirm-password-box input-box">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" placeholder="*********" id="confirm-password" name="confirm-password"
+                        required>
+                    </div>
+                    <div class="option-box">
+                        <a href="#"></a>
+                        <a href="#" id="to-signin">Already Have Account?</a>
+                    </div>
+                    <div class="loginBtn">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Forgot Password -->
+
+            <div class="form-box forgot-password">
+                <div class="logo-box">
+                    <img src="{% static 'images/Logo.png' %}" alt="logo">
+                </div>
+                <div class="title-box">
+                    <h3>Forgot Your Password?</h3>
+                    <div class="para">
+                        <p>Enter Enter your email so that we can send to password</p>
+                        <p>reset link</p>
+                    </div>
+                </div>
+                <form action="#">
+                    <div class="email-box input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="xyz@gmail.com" id="email" name="email" required>
+                    </div>
+                    <div class="loginBtn">
+                        <button type="submit" id="to-mailverification" >Send Email</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Mail Verification -->
+
+            <div class="form-box mailverification">
+                <div class="logo-box">
+                    <img src="{% static 'images/Logo.png' %}" alt="logo">
+                </div>
+                <div class="title-box">
+                    <h3>Please verify your email</h3>
+                    <div class="para">
+                        <p>You are almost there ! We send an email to</p>
+                        <p>xyz@gmail.com</p>
+                        <p>Just click on the link to complete verification</p>
+                        <p>If you don’t see it, you may need to check your spam.</p>
+                    </div>
+                </div>
+                <div class="change-email-box">
+                    <a href="#">Change email?</a>
+                </div>
+                <div class="loginBtn">
+                    <button type="sumit" id="resendEmail">Resend Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'script.js' %}"></script>
+
+</html>
